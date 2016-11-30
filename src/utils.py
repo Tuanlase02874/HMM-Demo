@@ -19,7 +19,7 @@ def convert_brown(file_names, outfile_name, show_tag=True):
     tags = Counter()
     fout = open(outfile_name, 'w')
     for fin in file_names:
-        print fin
+        print (fin)
         for line in open(fin, 'r'):
             line = line.strip()
             if line and not line.startswith('*'):
@@ -35,18 +35,20 @@ def convert_brown(file_names, outfile_name, show_tag=True):
                             if len(temp) == 2:
                                 word = temp[0]
                                 tag = re.subn(r'\|.+$','',temp[1])[0]
+                                tags[tag]+=1
                                 if show_tag == True:
                                     fout.write(word+'\t'+tag+'\n')
                                 else:
                                     fout.write(word+'\n')
                     num_sentences+=1
+                    fout.write("\n")
 
     print("Number Sentences: %d"%num_sentences)
     fout.close()
 def count_sentences(file_names):
+    print("Counting Sentences")
     num_sentences = 0
     for fin in file_names:
-        print fin
         for line in open(fin, 'r'):
             line = line.strip()
             if line and not line.startswith('*'):
@@ -57,12 +59,13 @@ def count_sentences(file_names):
     print("Number Sentences: %d" % num_sentences)
     return num_sentences
 
-def split_brown(file_names, test_file_name="text", train_file_name="train", percent=0.5):
+def split_brown(file_names, test_file_name="test", train_file_name="train", percent=0.8):
+    print("Split data to train and test")
     num_sentences = count_sentences(file_names)
-    print "Sentences: %d"%num_sentences
+    print("Sentences: %d"%num_sentences)
     num_sentences_train = int(percent * num_sentences)
-    print " Train Sentences: %d"% num_sentences_train
-    print " Test Sentences: %d" % (num_sentences - num_sentences_train)
+    print (" Train Sentences: %d"% num_sentences_train)
+    print (" Test Sentences: %d" % (num_sentences - num_sentences_train))
     index_sentence = [i for i in range(num_sentences)]
     shuffle(index_sentence)
     sep_dic = {}
@@ -84,7 +87,7 @@ def split_brown(file_names, test_file_name="text", train_file_name="train", perc
             line = line.strip()
             if line and not line.startswith('*'):
                 if line.startswith('=='):
-                    if sep_dic[i]:
+                    if sep_dic[index_sentence]:
                         train_file.write('\n\n\n')
                     else:
                         test_file.write('\n\n\n')
@@ -98,17 +101,19 @@ def split_brown(file_names, test_file_name="text", train_file_name="train", perc
                             if len(temp) == 2:
                                 word = temp[0]
                                 tag = re.subn(r'\|.+$','',temp[1])[0]
-                                if sep_dic[i]:
+                                if sep_dic[index_sentence]:
                                     train_file.write(word+'\t'+tag+'\n')
                                 else:
                                     test_file.write(word+'\t'+tag+'\n')
                                 tags[tag]+=1
                                 dictionary[word]+=1
-                index_sentence+=1
+                if sep_dic[index_sentence]:
+                    train_file.write('\n')
+                else:
+                    test_file.write('\n')
+                index_sentence += 1
     test_file.close()
     train_file.close()
-    print tags
-    print len(dictionary)
 
     with open('tags', 'w') as filw:
         for (word, count) in tags.most_common():
@@ -121,8 +126,8 @@ def split_brown(file_names, test_file_name="text", train_file_name="train", perc
             filw2.write(word + "\t" + str(count)+"\n")
     filw.close()
 
-split_brown(all_file_names, test_file_name="text", train_file_name="train", percent=0.5)
-#convert_brown(test_file_names, os.path.join(path_out,"test_key.txt"))
-#convert_brown(test_file_names, os.path.join(path_out,"test.txt"), False)
-#convert_brown(train_file_names,os.path.join(path_out,"train.txt"))
-#convert_brown(train_file_names,os.path.join(path_out,"train_fortest.txt"), False)
+split_brown(all_file_names, test_file_name="test", train_file_name="train", percent=0.8)
+convert_brown(test_file_names, os.path.join(path_out,"test_key.txt"))
+convert_brown(test_file_names, os.path.join(path_out,"test.txt"), False)
+convert_brown(train_file_names,os.path.join(path_out,"train.txt"))
+convert_brown(train_file_names,os.path.join(path_out,"train_fortest.txt"), False)

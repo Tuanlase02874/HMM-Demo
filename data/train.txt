@@ -1,6 +1,7 @@
 Austin	np-hl
 ,	,-hl
 Texas	np-hl
+
 --	--
 Committee	nn
 approval	nn
@@ -24,6 +25,7 @@ of	in
 Texas	np
 bankers	nns
 .	.
+
 Daniel	np
 personally	rb
 led	vbd
@@ -60,6 +62,7 @@ Revenue	nn-tl
 and	cc-tl
 Taxation	nn-tl
 .	.
+
 Under	in
 committee	nn
 rules	nns
@@ -74,6 +77,7 @@ for	in
 one	cd
 week	nn
 .	.
+
 But	cc
 questions	nns
 with	in
@@ -96,6 +100,7 @@ passage	nn
 of	in
 it	ppo
 .	.
+
 Daniel	np
 termed	vbd
 ``	``
@@ -133,6 +138,7 @@ next	ap
 Aug.	np
 31	cd
 .	.
+
 He	pps
 told	vbd
 the	at
@@ -162,6 +168,7 @@ a	at
 republic	nn
 ''	''
 .	.
+
 It	pps
 permits	vbz
 the	at
@@ -186,6 +193,7 @@ years	nns
 or	cc
 more	ap
 .	.
+
 The	at
 bill	nn
 ,	,
@@ -217,6 +225,7 @@ the	at
 state	nn
 treasurer	nn
 .	.
+
 The	at
 escheat	nn
 law	nn
@@ -237,6 +246,7 @@ property	nn
 Daniel	np
 declared	vbd
 .	.
+
 Dewey	np
 Lawrence	np
 ,	,
@@ -275,6 +285,7 @@ of	in
 bank	nn
 customers	nns
 .	.
+
 ``	``
 If	cs
 you	ppss
@@ -294,6 +305,7 @@ economy	nn
 he	pps
 said	vbd
 .	.
+
 ``	``
 You	ppss
 take	vb
@@ -306,6 +318,7 @@ of	in
 dollars	nns
 ''	''
 .	.
+
 Rep.	nn-tl
 Charles	np
 E.	np
@@ -345,6 +358,7 @@ pipeline	nn
 companies	nns
 ''	''
 .	.
+
 His	pp$
 contention	nn
 was	bedz
@@ -376,6 +390,7 @@ Cox	np
 of	in
 Austin	np
 .	.
+
 Cox	np
 argued	vbd
 that	cs
@@ -396,6 +411,7 @@ would	md
 impair	vb
 contracts	nns
 .	.
+
 He	pps
 also	rb
 complained	vbd
@@ -418,9 +434,11 @@ only	rb
 last	ap
 Monday	nr
 .	.
+
 Austin	np-hl
 ,	,-hl
 Texas	np-hl
+
 --	--
 Senators	nns
 unanimously	rb
@@ -451,6 +469,7 @@ other	ap
 largest	jjt
 counties	nns
 .	.
+
 The	at
 bill	nn
 is	bez
@@ -475,6 +494,7 @@ to	in
 the	at
 state	nn
 .	.
+
 There	ex
 was	bedz
 no	at
@@ -490,6 +510,7 @@ to	in
 the	at
 House	nn-tl
 .	.
+
 It	pps
 would	md
 authorize	vb
@@ -543,6 +564,7 @@ the	at-tl
 Deaf	jj-tl
 here	rb
 .	.
+
 Operating	vbg
 budget	nn
 for	in
@@ -592,6 +614,7 @@ told	vbd
 the	at
 Senate	nn-tl
 .	.
+
 The	at
 TEA	nn
 estimated	vbd
@@ -623,6 +646,7 @@ state	nn
 deaf	jj
 school	nn
 .	.
+
 Dallas	np
 may	md
 get	vb
@@ -647,6 +671,7 @@ and	cc
 Joe	np
 Ratcliff	np
 .	.
+
 While	cs
 details	nns
 are	ber
@@ -677,6 +702,7 @@ should	md
 be	be
 rejected	vbn
 .	.
+
 ``	``
 We're	ppss+ber
 getting	vbg
@@ -698,6 +724,7 @@ betting	nn
 said	vbd
 Ratcliff	np
 .	.
+
 ``	``
 But	cc
 I	ppss
@@ -719,6 +746,7 @@ oppose	vb
 it	ppo
 also	rb
 .	.
+
 I'm	ppss+bem
 willing	jj
 to	to
@@ -730,6 +758,7 @@ on	in
 it	ppo
 ''	''
 .	.
+
 Rep.	nn-tl
 Berry	np
 ,	,
@@ -750,6 +779,7 @@ on	in
 the	at
 ponies	nns
 .	.
+
 A	at
 House	nn-tl
 committee	nn
@@ -776,6 +806,7 @@ hard	jj
 sledding	nn
 later	rbr
 .	.
+
 The	at
 house	nn
 passed	vbd
@@ -802,6 +833,7 @@ assistance	nn
 to	in
 cities	nns
 .	.
+
 The	at
 senate	nn
 quickly	rb
@@ -824,6 +856,7 @@ on	in
 the	at
 calendar	nn
 .	.
+
 One	cd
 validated	vbd
 acts	nns
@@ -831,6 +864,7 @@ of	in
 school	nn
 districts	nns
 .	.
+
 Another	dt
 enlarged	vbd
 authority	nn
@@ -840,6 +874,7 @@ Beaumont	np-tl
 Navigation	nn-tl
 District	nn-tl
 .	.
+
 The	at
 third	od
 amended	vbd
@@ -865,6 +900,7 @@ previously	rb
 was	bedz
 adopted	vbn
 .	.
+
 Without	in
 dissent	nn
 ,	,
@@ -897,6 +933,7 @@ Gulf	nn-tl
 Coast	nn-tl
 district	nn
 .	.
+
 Money	nn
 for	in
 its	pp$
@@ -923,6 +960,7 @@ of	in
 a	at
 site	nn
 .	.
+
 Two	cd
 tax	nn
 revision	nn
@@ -930,6 +968,7 @@ bills	nns
 were	bed
 passed	vbn
 .	.
+
 One	cd
 ,	,
 by	in
@@ -964,6 +1003,7 @@ return	nn
 be	be
 notarized	vbn
 .	.
+
 Instead	rb
 ,	,
 retailers	nns
@@ -994,6 +1034,7 @@ a	at
 $1,000	nns
 fine	nn
 .	.
+
 It	pps
 was	bedz
 one	cd
@@ -1008,6 +1049,7 @@ Texas	np-tl
 Research	nn-tl
 League	nn-tl
 .	.
+
 The	at
 other	ap
 bill	nn
@@ -1050,6 +1092,7 @@ stocks	nns
 and	cc
 bonds	nns
 .	.
+
 Natural	jj
 gas	nn
 public	jj
@@ -1087,6 +1130,7 @@ reservoirs	nns
 for	in
 gas	nn
 .	.
+
 Marshall	np
 Formby	np
 of	in
@@ -1123,6 +1167,7 @@ costly	jj
 special	jj
 elections	nns
 .	.
+
 Under	in
 Formby's	np$
 plan	nn
@@ -1159,9 +1204,11 @@ Texas	np-tl
 Supreme	jj-tl
 Court	nn-tl
 .	.
+
 Austin	np-hl
 ,	,-hl
 Texas	np-hl
+
 --	--
 State	nn
 representatives	nns
@@ -1182,6 +1229,7 @@ prefer	vb
 to	to
 pay	vb
 .	.
+
 An	at
 adverse	jj
 vote	nn
@@ -1216,6 +1264,7 @@ a	at
 U.S.	np
 senator	nn
 .	.
+
 Rep.	nn-tl
 Wesley	np
 Roberts	np
@@ -1240,6 +1289,7 @@ kill	vb
 the	at
 bill	nn
 .	.
+
 The	at
 West	jj-tl
 Texan	np-tl
@@ -1265,6 +1315,7 @@ on	in
 Feb.	np
 22	cd
 .	.
+
 The	at
 proposal	nn
 would	md
@@ -1294,6 +1345,7 @@ ballot	nn
 Roberts	np
 said	vbd
 .	.
+
 Opponents	nns
 generally	rb
 argued	vbd
@@ -1316,6 +1368,7 @@ an	at
 intelligent	jj
 choice	nn
 .	.
+
 All	abn
 Dallas	np
 members	nns
@@ -1332,9 +1385,11 @@ who	wps
 was	bedz
 absent	jj
 .	.
+
 Austin	np-hl
 ,	,-hl
 Texas	np-hl
+
 --	--
 Paradise	nn-tl
 lost	vbd
@@ -1349,6 +1404,7 @@ big	jj
 cities	nns
 Thursday	nr
 .	.
+
 Rep.	nn-tl
 James	np
 Cotten	np
@@ -1393,6 +1449,7 @@ of	in
 250	cd
 people	nns
 .	.
+
 When	wrb
 the	at
 shouting	nn
@@ -1426,6 +1483,7 @@ Parkhouse	np
 of	in
 Dallas	np
 .	.
+
 Most	ap
 of	in
 the	at
@@ -1440,6 +1498,7 @@ and	cc
 Sen.	nn-tl
 Parkhouse	np
 .	.
+
 The	at
 bill	nn
 would	md
@@ -1461,6 +1520,7 @@ local	jj
 water	nn
 project	nn
 .	.
+
 Cotten	np
 construed	vbd
 this	dt
@@ -1492,6 +1552,7 @@ for	in
 rural	jj
 Texas	np
 .	.
+
 Statements	nns
 by	in
 other	ap
@@ -1528,6 +1589,7 @@ sway	vb
 Cotten's	np$
 attack	nn
 .	.
+
 The	at
 bill's	nn$
 defenders	nns
@@ -1564,6 +1626,7 @@ of	in
 Sulphur	nn-tl
 Springs	nns-tl
 .	.
+
 ``	``
 This	dt
 is	bez
@@ -1576,6 +1639,7 @@ bill	nn
 said	vbd
 Chapman	np
 .	.
+
 ``	``
 Dallas	np
 and	cc
@@ -1585,6 +1649,7 @@ can	md
 vote	vb
 bonds	nns
 .	.
+
 This	dt
 would	md
 help	vb
@@ -1594,9 +1659,11 @@ peanut	nn
 districts	nns
 ''	''
 .	.
+
 Austin	np-hl
 ,	,-hl
 Texas	np-hl
+
 --	--
 A	at
 Houston	np
@@ -1622,6 +1689,7 @@ educational	jj
 methods	nns
 ''	''
 .	.
+
 Rep.	nn-tl
 Henry	np
 C.	np
@@ -1663,6 +1731,7 @@ school	nn
 teaching	vbg
 certificate	nn
 .	.
+
 A	at
 normal	jj
 year's	nn$
@@ -1674,6 +1743,7 @@ is	bez
 semester	nn
 hours	nns
 .	.
+
 Grover	np
 also	rb
 would	md
@@ -1696,6 +1766,7 @@ they	ppss
 are	ber
 teaching	vbg
 .	.
+
 The	at
 remainder	nn
 of	in
@@ -1709,6 +1780,7 @@ in	in
 general	jj
 subjects	nns
 .	.
+
 ``	``
 A	at
 person	nn
@@ -1747,6 +1819,7 @@ schools	nns
 said	vbd
 Grover	np
 .	.
+
 College	nn
 teachers	nns
 in	in
@@ -1760,6 +1833,7 @@ the	at
 Education	nn-tl
 courses	nns
 .	.
+
 Fifty-three	cd
 of	in
 the	at
@@ -1774,12 +1848,14 @@ of	in
 the	at
 proposal	nn
 .	.
+
 Paris	np-hl
 ,	,-hl
 Texas	np-hl
 (	(-hl
 sp.	nn-hl
 )	)-hl
+
 --	--
 The	at
 board	nn
@@ -1805,6 +1881,7 @@ school's	nn$
 new	jj
 president	nn
 .	.
+
 Dr.	nn-tl
 Clark	np
 will	md
@@ -1826,6 +1903,7 @@ present	jj
 school	nn
 term	nn
 .	.
+
 Dr.	nn-tl
 Clark	np
 holds	vbz
@@ -1841,6 +1919,7 @@ University	nn-tl
 of	in-tl
 Oklahoma	np-tl
 .	.
+
 He	pps
 also	rb
 received	vbd
@@ -1870,6 +1949,7 @@ Weatherford	np
 ,	,
 Okla.	np
 .	.
+
 In	in
 addition	nn
 ,	,
@@ -1888,6 +1968,7 @@ Institute	nn-tl
 of	in-tl
 Technology	nn-tl
 .	.
+
 During	in
 his	pp$
 college	nn
@@ -1907,6 +1988,7 @@ a	at
 football	nn
 letterman	nn
 .	.
+
 Dr.	nn-tl
 Clark	np
 has	hvz
@@ -1958,6 +2040,7 @@ Kan.	np
 State	nn-tl
 College	nn-tl
 .	.
+
 He	pps
 has	hvz
 served	vbn
@@ -1976,12 +2059,14 @@ the	at
 U.S.	np-tl
 Army	nn-tl
 .	.
+
 Denton	np-hl
 ,	,-hl
 Texas	np-hl
 (	(-hl
 sp.	nn-hl
 )	)-hl
+
 --	--
 Principals	nns
 of	in
@@ -2010,6 +2095,7 @@ Chester	np
 O.	np
 Strickland	np
 .	.
+
 State	nn
 and	cc
 federal	jj
@@ -2042,6 +2128,7 @@ dependent	jj
 children	nns
 program	vb
 .	.
+
 The	at
 report	nn
 ,	,
@@ -2080,6 +2167,7 @@ ADC	nn
 case	nn
 load	nn
 .	.
+
 The	at
 report	nn
 called	vbd
@@ -2105,11 +2193,13 @@ ADC	nn
 dependency	nn
 ''	''
 .	.
+
 ``	``
 Must	md-hl
 solve	vb-hl
 problem	nn-hl
 ''	''
+
 The	at
 monthly	jj
 cost	nn
@@ -2144,6 +2234,7 @@ Co.	nn-tl
 committee	nn
 chairman	nn
 .	.
+
 ``	``
 We	ppss
 must	md
@@ -2166,6 +2257,7 @@ subsistence	nn
 Martin	np
 said	vbd
 .	.
+
 The	at
 volume	nn
 of	in
@@ -2200,6 +2292,7 @@ because	rb
 of	in
 color	nn
 .	.
+
 These	dts
 ,	,
 he	pps
@@ -2221,9 +2314,11 @@ to	in
 ADC	nn
 ''	''
 .	.
+
 Calls	vbz-hl
 for	in-hl
 extension	nn-hl
+
 Other	ap
 recommendations	nns
 made	vbn
@@ -2232,6 +2327,7 @@ the	at
 committee	nn
 are	ber
 :	:
+
 Extension	nn
 of	in
 the	at
@@ -2259,6 +2355,7 @@ preserving	vbg
 family	nn
 unity	nn
 .	.
+
 Research	nn
 projects	nns
 as	ql
@@ -2275,3 +2372,4 @@ dependency	nn
 and	cc
 illegitimacy	nn
 .	.
+
