@@ -43,7 +43,7 @@ def main():
         train(train_data_filename, rare_train_data_filename, hmm_model_filename, util.rare_words_rule_p1)
 
     # 2. tagging
-    test_data_filename = 'test'
+    test_data_filename = 'test_untag'
     result_filename = 'test.output'
     tag(test_data_filename, result_filename, hmm_model_filename)
 
