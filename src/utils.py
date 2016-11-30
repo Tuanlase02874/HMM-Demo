@@ -79,6 +79,7 @@ def split_brown(file_names, test_file_name="test", train_file_name="train", perc
     dictionary = Counter()
 
     test_file = open(test_file_name, 'w')
+    test_untags_file = open(test_file_name+"_untag", 'w')
     train_file = open(train_file_name, 'w')
 
     index_sentence = 0
@@ -105,15 +106,18 @@ def split_brown(file_names, test_file_name="test", train_file_name="train", perc
                                     train_file.write(word+'\t'+tag+'\n')
                                 else:
                                     test_file.write(word+'\t'+tag+'\n')
+                                    test_untags_file.write(word+'\n')
                                 tags[tag]+=1
                                 dictionary[word]+=1
                 if sep_dic[index_sentence]:
                     train_file.write('\n')
                 else:
                     test_file.write('\n')
+                    test_untags_file.write('\n')
                 index_sentence += 1
     test_file.close()
     train_file.close()
+    test_untags_file.close()
 
     with open('tags', 'w') as filw:
         for (word, count) in tags.most_common():
@@ -127,7 +131,7 @@ def split_brown(file_names, test_file_name="test", train_file_name="train", perc
     filw.close()
 
 split_brown(all_file_names, test_file_name="test", train_file_name="train", percent=0.8)
-convert_brown(test_file_names, os.path.join(path_out,"test_key.txt"))
-convert_brown(test_file_names, os.path.join(path_out,"test.txt"), False)
-convert_brown(train_file_names,os.path.join(path_out,"train.txt"))
-convert_brown(train_file_names,os.path.join(path_out,"train_fortest.txt"), False)
+#convert_brown(test_file_names, os.path.join(path_out,"test_key.txt"))
+#convert_brown(test_file_names, os.path.join(path_out,"test.txt"), False)
+#convert_brown(train_file_names,os.path.join(path_out,"train.txt"))
+#convert_brown(train_file_names,os.path.join(path_out,"train_fortest.txt"), False)
