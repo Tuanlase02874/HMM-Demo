@@ -37,13 +37,13 @@ def main():
     TRAIN = True
     # 1. training
     hmm_model_filename = 'hmm.model'
-    train_data_filename = 'train'
+    train_data_filename = 'train_clean'
     rare_train_data_filename = 'rate_train'
     if TRAIN:
         train(train_data_filename, rare_train_data_filename, hmm_model_filename, util.rare_words_rule_p1)
 
     # 2. tagging
-    test_data_filename = 'test_untag'
+    test_data_filename = 'test_untag_clean'
     result_filename = 'test.output'
     tag(test_data_filename, result_filename, hmm_model_filename)
 

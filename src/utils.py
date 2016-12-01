@@ -133,7 +133,7 @@ def split_brown(file_names, test_file_name="test", train_file_name="train", perc
 
 
 def clean_data(test_file_name="test", train_file_name="train",tags_file="tags",dictionary_file="dictionary"):
-    tags_threshold = 17
+    tags_threshold = 500
     tags = defaultdict(int)
     dictionary = defaultdict(int)
 
@@ -154,7 +154,7 @@ def clean_data(test_file_name="test", train_file_name="train",tags_file="tags",d
             lin = line.replace("\n", "").split("\t")
             if tags[lin[1]] >= tags_threshold:
                 test_file_out.write(line)
-                test_untags_file_out.write(line)
+                test_untags_file_out.write(lin[0]+"\n")
     test_file.close()
     test_file_out.close()
     test_untags_file_out.close()
