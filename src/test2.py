@@ -40,6 +40,17 @@ class GeneTagger:
                 for tag in self.tags:
                     self.tag_word[(tag, '_RARE_')] += self.tag_word[(tag, word)]
 
+    Vo_size = 50000
+    def smothing_unigram(self,w):
+        lambda_1 = 0.4
+        q_ml_1 = lambda_1 * self.unigram[w] + (1 - lambda_1)
+        return q_ml_1
+    def smothing_unigram(self,w):
+        lambda_2 = 0.4
+        q_ml_1 = lambda_2 * self.unigram[w] + (1 - lambda_1)
+        return q_ml_1
+
+
     def q(self, s, u, v):
         "Probability of the trigram (u, v, s) given the prefix bigram (u, v)"
         Vo_size = 50000
