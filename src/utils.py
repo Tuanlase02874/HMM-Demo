@@ -1,6 +1,7 @@
 import os
 import re
 from collections import Counter
+from collections import defaultdict
 from random import shuffle
 from operator import itemgetter
 
@@ -130,7 +131,50 @@ def split_brown(file_names, test_file_name="test", train_file_name="train", perc
             filw2.write(word + "\t" + str(count)+"\n")
     filw.close()
 
-split_brown(all_file_names, test_file_name="test", train_file_name="train", percent=0.8)
+
+def clean_data(test_file_name="test", train_file_name="train",tags_file="tags",dictionary_file="dictionary"):
+    tags_threshold = 17
+    tags = defaultdict(int)
+    dictionary = defaultdict(int)
+
+    tagf= open(tags_file, 'r')
+    for line in tagf:
+        lin = line.replace("\n","").split("\t")
+        tags[lin[0]] = int(lin[1])
+    tagf.close()
+
+    test_untags_file_out = open(test_file_name + "_untag_clean", 'w')
+    test_file = open(test_file_name, 'r')
+    test_file_out = open(test_file_name + "_clean", 'w')
+    for line in test_file:
+        if line == "\n":
+            test_file_out.write(line)
+            test_untags_file_out.write(line)
+        else:
+            lin = line.replace("\n", "").split("\t")
+            if tags[lin[1]] >= tags_threshold:
+                test_file_out.write(line)
+                test_untags_file_out.write(line)
+    test_file.close()
+    test_file_out.close()
+    test_untags_file_out.close()
+
+    train_file_out = open(train_file_name+"_clean", 'w')
+
+    train_file =  open(train_file_name, 'r')
+    for line in train_file:
+        if line == "\n":
+            train_file_out.write(line)
+        else:
+            lin = line.replace("\n", "").split("\t")
+            if tags[lin[1]] >= tags_threshold:
+                train_file_out.write(line)
+    train_file.close()
+    train_file_out.close()
+
+
+#split_brown(all_file_names, test_file_name="test", train_file_name="train", percent=0.8)
+clean_data(test_file_name="test", train_file_name="train", tags_file="tags", dictionary_file="dictionary")
 #convert_brown(test_file_names, os.path.join(path_out,"test_key.txt"))
 #convert_brown(test_file_names, os.path.join(path_out,"test.txt"), False)
 #convert_brown(train_file_names,os.path.join(path_out,"train.txt"))
