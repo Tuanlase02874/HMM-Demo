@@ -166,6 +166,7 @@ class ViterbiTagger(Hmm_ex):
         return tag sequence
         """
         n = len(sent)
+        print("Sentence Len: %d "% n)
         pi = []
         bp = []
         for k in range(0, n + 1):
@@ -206,6 +207,7 @@ class ViterbiTagger(Hmm_ex):
                         print ('Pi[{k}, {u}, {v}] = {max}'.format(k=k, u=u, v=v, max=max_pi))
                         print ('bp[{k}, {u}, {v}] = {bp}'.format(k=k, u=u, v=v, bp=max_w))
                         print ('\n')
+                    #print("++++++++++++++++++running++++++++++++++++++")
                     pi[k][(u, v)] = max_pi
                     bp[k][(u, v)] = max_w
             if util.DEBUG:

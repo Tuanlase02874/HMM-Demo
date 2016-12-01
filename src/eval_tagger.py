@@ -10,6 +10,37 @@ Running the script on your tagger output like this
 """
 
 
+def corpus_iterator(corpus_file, with_logprob = False):
+    """
+    Get an iterator object over the corpus file. The elements of the
+    iterator contain (word, ne_tag) tuples. Blank lines, indicating
+    sentence boundaries return (None, None).
+    """
+    l = corpus_file.readline()
+    tagfield = with_logprob and -2 or -1
+
+    try:
+        while l:
+            line = l.strip()
+            if line: # Nonempty line
+                # Extract information from line.
+                # Each line has the format
+                # word ne_tag [log_prob]
+                fields = line.split(" ")
+                ne_tag = fields[tagfield]
+                word = " ".join(fields[:tagfield])
+                yield word, ne_tag
+            else: # Empty line
+                yield (None, None)
+            l = corpus_file.readline()
+    except IndexError:
+        sys.stderr.write("Could not read line: \n")
+        sys.stderr.write("\n%s" % line)
+        if with_logprob:
+            sys.stderr.write("Did you forget to output log probabilities in the prediction file?\n")
+        sys.exit(1)
+
+
 class Evaluator(object):
 
     def __init__(self):
