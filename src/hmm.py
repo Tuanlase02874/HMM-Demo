@@ -1,8 +1,5 @@
 #! /usr/bin/python
 
-__author__ = "ping.zou"
-__date__ = "$March 16, 2013"
-
 from count_freqs import Hmm
 from collections import defaultdict
 import util

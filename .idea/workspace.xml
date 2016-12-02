@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d008eba-a002-4931-bc07-8b6fefa435ec" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/.ipynb_checkpoints/NLP Test-checkpoint.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/NLP Test.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hmm.model" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hmm.model.counts" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/p2.model" afterPath="$PROJECT_DIR$/src/p2.model" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/count_freqs.py" afterPath="$PROJECT_DIR$/src/count_freqs.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/data.dev.out" afterPath="$PROJECT_DIR$/src/data.dev.out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hmm.py" afterPath="$PROJECT_DIR$/src/hmm.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util.py" afterPath="$PROJECT_DIR$/src/util.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/p2.py" afterPath="$PROJECT_DIR$/src/p2.py" />
     </list>
     <ignored path="06 HMM.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,19 +25,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="hmm.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="hmm.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/hmm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="815">
-              <caret line="219" column="67" selection-start-line="219" selection-start-column="67" selection-end-line="219" selection-end-column="67" />
+            <state relative-caret-position="66">
+              <caret line="191" column="23" selection-start-line="191" selection-start-column="23" selection-end-line="191" selection-end-column="23" />
               <folding>
-                <element signature="e#74#101#0" expanded="true" />
+                <element signature="e#20#47#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="util.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="util.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="236">
@@ -109,8 +104,8 @@
       <file leaf-file-name="count_freqs.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/count_freqs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="116" column="61" selection-start-line="116" selection-start-column="61" selection-end-line="116" selection-end-column="61" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="18" />
               <folding>
                 <element signature="e#20#30#0" expanded="true" />
               </folding>
@@ -121,10 +116,10 @@
       <file leaf-file-name="p2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/p2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="50" column="10" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="e#0#29#0" expanded="true" />
+                <element signature="e#0#43#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -167,10 +162,10 @@
         <option value="$PROJECT_DIR$/src/utils.py" />
         <option value="$PROJECT_DIR$/src/convert_brown.py" />
         <option value="$PROJECT_DIR$/src/split_brown.py" />
-        <option value="$PROJECT_DIR$/src/p2.py" />
         <option value="$PROJECT_DIR$/src/count_freqs.py" />
-        <option value="$PROJECT_DIR$/src/hmm.py" />
         <option value="$PROJECT_DIR$/src/util.py" />
+        <option value="$PROJECT_DIR$/src/hmm.py" />
+        <option value="$PROJECT_DIR$/src/p2.py" />
       </list>
     </option>
   </component>
@@ -628,7 +623,7 @@
         <state relative-caret-position="306">
           <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
           <folding>
-            <element signature="e#74#101#0" expanded="true" />
+            <element signature="e#20#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -677,7 +672,7 @@
         <state relative-caret-position="306">
           <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
           <folding>
-            <element signature="e#74#101#0" expanded="true" />
+            <element signature="e#20#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -712,7 +707,7 @@
         <state relative-caret-position="357">
           <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
           <folding>
-            <element signature="e#74#101#0" expanded="true" />
+            <element signature="e#20#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -864,6 +859,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="113" column="39" selection-start-line="113" selection-start-column="39" selection-end-line="113" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/convert_brown.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="784">
@@ -884,8 +887,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/count_freqs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="116" column="61" selection-start-line="116" selection-start-column="61" selection-end-line="116" selection-end-column="61" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="18" />
           <folding>
             <element signature="e#20#30#0" expanded="true" />
           </folding>
@@ -894,29 +897,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/p2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" column="10" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hmm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="815">
-          <caret line="219" column="67" selection-start-line="219" selection-start-column="67" selection-end-line="219" selection-end-column="67" />
+        <state relative-caret-position="66">
+          <caret line="191" column="23" selection-start-line="191" selection-start-column="23" selection-end-line="191" selection-end-column="23" />
           <folding>
-            <element signature="e#74#101#0" expanded="true" />
+            <element signature="e#20#47#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="113" column="39" selection-start-line="113" selection-start-column="39" selection-end-line="113" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>

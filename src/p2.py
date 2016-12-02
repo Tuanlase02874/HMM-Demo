@@ -1,4 +1,4 @@
-from hmm import ViterbiTagger
+from hmm import ViterbiTagger, SimpleTagger
 import util
 
 
@@ -19,7 +19,8 @@ def train(train_data_filename, rare_train_data_filename, hmm_model_filename, rar
         hmm_model.rare_words_rule)
 
     print('3. train hmm model again using the new train data')
-    hmm_model_rare = ViterbiTagger(3)
+    #hmm_model_rare = ViterbiTagger(3)
+    hmm_model_rare = SimpleTagger(3)
     hmm_model_rare.train(open(rare_train_data_filename,'r'))
     hmm_model_rare.write_counts(open(hmm_model_filename, 'w'))
 
