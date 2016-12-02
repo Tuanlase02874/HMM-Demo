@@ -11,27 +11,45 @@ RARE_WORD_THRESHOLD = 5
 
 
 def is_numeric(word):
-
+    '''
+    the word contains at least one numeric characters
+    '''
     find_numeric = False
     if re.match('[0-9]+', word):
         find_numeric = True
+    # for c in word:
+    #     try:
+    #         int(c)
+    #         find_numeric = True
+    #         break
+    #     except ValueError:
+    #         continue
     return find_numeric
 
 
 def is_all_uppercase(word):
-
+    '''
+    The word consists entirely of capitalized letters.
+    '''
     all_uppercase = False
     if re.match('^[A-Z]+$', word):
         all_uppercase = True
+    # for c in word:
+    #     if not c.isupper():
+    #         all_uppercase = False
+    #         break
     return all_uppercase
 
 
 def is_last_uppercase(word):
-
+    '''
+    The word is rare, not all capitals, and ends with a capital letter.
+    '''
     last_uppercase = False
     if re.match('.*[A-Z]$', word):
         last_uppercase = True
     return last_uppercase
+    # return word[-1].isupper()
 
 
 def rare_words_rule_p1(word):
@@ -120,6 +138,7 @@ def test_sent_iterator(testdata_iterator):
 
 def test():
     print (is_last_uppercase('DDDeD'))
+
 
 if __name__ == '__main__':
     test()

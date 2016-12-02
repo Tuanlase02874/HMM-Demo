@@ -3,14 +3,14 @@
 import sys
 from collections import defaultdict
 import six
+import math
 
 """
 Count n-gram frequencies in a data file and write counts to
-stdout.
+stdout. 
 """
 
-
-def simple_corpus_iterator(corpus_file):
+def simple_conll_corpus_iterator(corpus_file):
     """
     Get an iterator object over the corpus file. The elements of the
     iterator contain (word, ne_tag) tuples. Blank lines, indicating
@@ -19,36 +19,40 @@ def simple_corpus_iterator(corpus_file):
     l = corpus_file.readline()
     while l:
         line = l.strip()
-        if line:
+        if line: # Nonempty line
+            # Extract information from line.
+            # Each line has the format
+            # word pos_tag phrase_tag ne_tag
             fields = line.split(" ")
             ne_tag = fields[-1]
+            #phrase_tag = fields[-2] #Unused
+            #pos_tag = fields[-3] #Unused
             word = " ".join(fields[:-1])
             yield word, ne_tag
-        else:
+        else: # Empty line
             yield (None, None)                        
         l = corpus_file.readline()
-
 
 def sentence_iterator(corpus_iterator):
     """
     Return an iterator object that yields one sentence at a time.
     Sentences are represented as lists of (word, ne_tag) tuples.
     """
-    current_sentence = []
+    current_sentence = [] #Buffer for the current sentence
     for l in corpus_iterator:        
             if l==(None, None):
-                if current_sentence:
+                if current_sentence:  #Reached the end of a sentence
                     yield current_sentence
-                    current_sentence = []
-                else:
+                    current_sentence = [] #Reset buffer
+                else: # Got empty input stream
                     sys.stderr.write("WARNING: Got empty input file/stream.\n")
                     raise StopIteration
             else:
-                current_sentence.append(l)
+                current_sentence.append(l) #Add token to the buffer
 
-    if current_sentence:
-        yield current_sentence
-
+    if current_sentence: # If the last line was blank, we're done
+        yield current_sentence  #Otherwise when there is no more token
+                                # in the stream return the last sentence.
 
 def get_ngrams(sent_iterator, n):
     """
@@ -69,6 +73,9 @@ def get_ngrams(sent_iterator, n):
 
 
 class Hmm(object):
+    """
+    Stores counts for n-grams and emissions. 
+    """
 
     def __init__(self, n=3):
         assert n>=2, "Expecting n>=2."
@@ -78,29 +85,40 @@ class Hmm(object):
         self.all_states = set()
 
     def train(self, corpus_file):
-
+        """
+        Count n-gram frequencies and emission probabilities from a corpus file.
+        """
         ngram_iterator = \
-            get_ngrams(sentence_iterator(simple_corpus_iterator(corpus_file)), self.n)
+            get_ngrams(sentence_iterator(simple_conll_corpus_iterator(corpus_file)), self.n)
 
         for ngram in ngram_iterator:
+            #Sanity check: n-gram we get from the corpus stream needs to have the right length
             assert len(ngram) == self.n, "ngram in stream is %i, expected %i" % (len(ngram, self.n))
 
-            tagsonly = tuple([ne_tag for word, ne_tag in ngram])
-            for i in six.moves.range(2, self.n+1):
+            tagsonly = tuple([ne_tag for word, ne_tag in ngram]) #retrieve only the tags            
+            for i in six.moves.range(2, self.n+1): #Count NE-tag 2-grams..n-grams
                 self.ngram_counts[i-1][tagsonly[-i:]] += 1
             
-            if ngram[-1][0] is not None:
-                self.ngram_counts[0][tagsonly[-1:]] += 1
-                self.emission_counts[ngram[-1]] += 1
+            if ngram[-1][0] is not None: # If this is not the last word in a sentence
+                self.ngram_counts[0][tagsonly[-1:]] += 1 # count 1-gram
+                self.emission_counts[ngram[-1]] += 1 # and emission frequencies
 
-            if ngram[-2][0] is None:
+            # Need to count a single n-1-gram of sentence start symbols per sentence
+            if ngram[-2][0] is None: # this is the first n-gram in a sentence
                 self.ngram_counts[self.n - 2][tuple((self.n - 1) * ["*"])] += 1
 
     def write_counts(self, output, printngrams=[1,2,3]):
+        """
+        Writes counts to the output file object.
+        Format:
 
+        """
+        # First write counts for emissions
         for word, ne_tag in self.emission_counts:            
             output.write("%i WORDTAG %s %s\n" % (self.emission_counts[(word, ne_tag)], ne_tag, word))
 
+
+        # Then write counts for all ngrams
         for n in printngrams:            
             for ngram in self.ngram_counts[n-1]:
                 ngramstr = " ".join(ngram)
@@ -126,9 +144,11 @@ class Hmm(object):
                 ngram = tuple(parts[2:])
                 self.ngram_counts[n-1][ngram] = count
 
-
 if __name__ == "__main__":
     input = open(sys.argv[1],"r")
+    # Initialize a trigram counter
     counter = Hmm(3)
+    # Collect counts
     counter.train(input)
+    # Write the countss
     counter.write_counts(sys.stdout)
