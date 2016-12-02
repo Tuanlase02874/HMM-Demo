@@ -9,25 +9,20 @@ Requirement
  
 Examples
 =============
-1. Create data for training and testing HMM: cd \src | python ultils.py
-   Functions:
-	* Seperate base on name file
-		- Create data\test.txt [word]
-		- Create data\test_key [word tag]
-		- Create data\train.txt [word tag]
-		- Create data\train_fortest [word]
-	* Seperate base on random sentences
-		- src\test [word tag]
-		- src\test_untag [word]
-		- src\train [word tag]
-  Output:
+1. Collection and Cleaning Brown Corpus: 
+	Input: \brown foldel
+	Output: brown.pos file
+	# python convert_brown.py
+	> Num Sentence: 54192 
+2.Create data for training and testing HMM: Ramdom choose 80% for train and 20% for testing
+  Input: brown.pos
+  Output: test_2, test_2_untag, train_2, tags, dictionary
   --------------------------------
-    Split data to train and test
-    Counting Sentences
-	Number Sentences: 57335
-	Sentences: 57335
-	Train Sentences: 45868
-	Test Sentences: 11467
+Split data to train and test
+Sentences: 54192
+ Train Sentences: 43353
+ Test Sentences: 10839
+Finish split 54192 sentence
   --------------------------------
 
   

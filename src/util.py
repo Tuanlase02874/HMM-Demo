@@ -121,6 +121,5 @@ def test_sent_iterator(testdata_iterator):
 def test():
     print (is_last_uppercase('DDDeD'))
 
-
 if __name__ == '__main__':
     test()

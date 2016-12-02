@@ -172,9 +172,21 @@ def clean_data(test_file_name="test", train_file_name="train",tags_file="tags",d
     train_file.close()
     train_file_out.close()
 
+def clean_data_pen_tag(int_file_name="filename", out_file_name="train.pen"):
+    f_in = open(int_file_name,'r')
+
+    line = f_in.readline()
+    while line:
+        l = line.strip()
+        if len(l.split("\t")) == 2:
+            print(l)
+
+        line = f_in.readline()
+
+
 
 #split_brown(all_file_names, test_file_name="test", train_file_name="train", percent=0.8)
-clean_data(test_file_name="test", train_file_name="train", tags_file="tags", dictionary_file="dictionary")
+#clean_data(test_file_name="test", train_file_name="train", tags_file="tags", dictionary_file="dictionary")
 #convert_brown(test_file_names, os.path.join(path_out,"test_key.txt"))
 #convert_brown(test_file_names, os.path.join(path_out,"test.txt"), False)
 #convert_brown(train_file_names,os.path.join(path_out,"train.txt"))
